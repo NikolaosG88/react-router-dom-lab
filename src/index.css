@@ -1,3 +1,5 @@
+/* // src/index.css */
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -89,8 +91,18 @@ li {
 }
 
 .mail-box {
+  width: 150px;
+  height: 150px;
+  background-color: #4e3eb4;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 2px solid white;
-  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
 }
 
 form {

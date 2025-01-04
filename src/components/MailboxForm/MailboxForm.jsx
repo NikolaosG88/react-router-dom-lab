@@ -1,18 +1,20 @@
 // src/components/MailboxForm/MailboxForm
 import { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom';
 
 
 const MailboxForm = ({ addBox }) => {
 
   const [boxOwner, setBoxOwner] = useState('');
   const [boxSize, setBoxSize] = useState('small');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     addBox({ boxOwner, boxSize }); // Pass form data to `addBox`
     setBoxOwner(''); // Clear the form
     setBoxSize('small');
+    navigate('/mailboxes');
   };
 
   return (
